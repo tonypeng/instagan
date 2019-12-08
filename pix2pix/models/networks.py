@@ -384,7 +384,7 @@ class ResnetGenerator(nn.Module):
         activation = get_activation(activation_type)
 
         model = [nn.ReflectionPad2d(3),
-                 nn.Conv2d(input_nc, ngf, kernel_size=7, padding=0, bias=use_bias, dilation=conv_dilation),
+                 nn.Conv2d(input_nc, ngf, kernel_size=7, padding=0, bias=use_bias),
                  norm_layer(ngf),
                  activation(inplace=True)]
 
