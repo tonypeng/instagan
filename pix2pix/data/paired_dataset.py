@@ -57,7 +57,7 @@ class PairedDataset(BaseDataset):
 
         transform_params = get_params(self.opt, A_img.size)
         A_transform = get_transform(self.opt, transform_params, grayscale=(self.input_nc == 1))
-        B_transform = get_trddansform(self.opt, transform_params, grayscale=(self.output_nc == 1))
+        B_transform = get_transform(self.opt, transform_params, grayscale=(self.output_nc == 1))
 
         A = A_transform(A_img)
         B = B_transform(B_img)
